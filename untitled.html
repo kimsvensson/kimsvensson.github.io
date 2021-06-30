@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+function startTime() {
+  var today = new Date();
+  var h = today.getHours();
+  var m = today.getMinutes();
+  var s = today.getSeconds();
+  m = checkTime(m);
+  s = checkTime(s);
+  document.getElementById('txt').innerHTML =
+  h + ":" + m + ":" + s;
+  var t = setTimeout(startTime, 1000);
+}
+function checkTime(i) {
+  if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+  return i;
+}
+</script>
+<body onload="startTime()">
+
+<div id="txt" style="float:right;font-family:Menlo,serif;font-size:11px ;"></div>
+</body>
+<h1 style="float:right;margin-right: -54px;margin-top: 11px;">Take your time</h1>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {background-color:lightgrey;background-repeat:no-repeat;background-position:top left;background-attachment:fixed;}
+h1{font-family:Menlo, serif;font-size:11px;font-style:normal;font-weight:normal;color:#000000;background-color:#none;}
+p {font-family:Menlo, serif;font-size:14px;font-style:normal;font-weight:normal;color:#000000;background-color:#none;width: 600px;}
+blue{font-family:Menlo, serif;font-size:14px;font-style:normal;font-weight:normal;color:#0400ff;background-color:#none;}
+red{font-family:Menlo, serif;font-size:14px;font-style:normal;font-weight:normal;color:#ff0000;background-color:#none;}
+yellow{font-family:Menlo, serif;font-size:14px;font-style:normal;font-weight:normal;color:#00ff11;background-color:#none;}
+orange{font-family:Menlo, serif;font-size:14px;font-style:normal;font-weight:normal;color:darkorange;background-color:#none;}
+
+</style>
+</head>
+<body>
+<p>Untitled</p>
+<br>
+<p>Framed photograph with text. 40x50 cm.</p>
+<p>2017</p>
+<br>
+<p>The print consists of an image of the exterior of the Crystal Palace, when it held the Great Exhibition in London 1851. The exhibition displayed the technologial progress of the industrial revolution. The building itself were notably unique in it’s time due to that large parts of the building was glass. The photograph are conjoined with the information given to the visitors of the Pan American Exposition in 1901; "Please remember that when you enter the gates you are part of the show".</p>
+<br>
+<img src="untitled1.jpeg" alt="image" width="600" style="margin-top: 1.0rem;">
+</body>
+</html>

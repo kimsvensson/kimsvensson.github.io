@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+function startTime() {
+  var today = new Date();
+  var h = today.getHours();
+  var m = today.getMinutes();
+  var s = today.getSeconds();
+  m = checkTime(m);
+  s = checkTime(s);
+  document.getElementById('txt').innerHTML =
+  h + ":" + m + ":" + s;
+  var t = setTimeout(startTime, 1000);
+}
+function checkTime(i) {
+  if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+  return i;
+}
+</script>
+<body onload="startTime()">
+
+<div id="txt" style="float:right;font-family:Menlo,serif;font-size:11px ;"></div>
+</body>
+<h1 style="float:right;margin-right: -54px;margin-top: 11px;">Take your time</h1>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {background-color:lightgrey;background-repeat:no-repeat;background-position:top left;background-attachment:fixed;}
+h1{font-family:Menlo, serif;font-size:11px;font-style:normal;font-weight:normal;color:#000000;background-color:#none;}
+p {font-family:Menlo, serif;font-size:14px;font-style:normal;font-weight:normal;color:#000000;background-color:#none;width: 600px;}
+blue{font-family:Menlo, serif;font-size:14px;font-style:normal;font-weight:normal;color:#0400ff;background-color:#none;}
+red{font-family:Menlo, serif;font-size:14px;font-style:normal;font-weight:normal;color:#ff0000;background-color:#none;}
+yellow{font-family:Menlo, serif;font-size:14px;font-style:normal;font-weight:normal;color:#00ff11;background-color:#none;}
+orange{font-family:Menlo, serif;font-size:14px;font-style:normal;font-weight:normal;color:darkorange;background-color:#none;}
+
+</style>
+</head>
+<body>
+<p>I'm Week</p>
+<br>
+<p>Digital video</p>
+<p>2021</p>
+<br>
+<p>Went on a summertrip with a friend. I documented everything with black and white film and him with color, we share it amongst each other afterwards. We stayed there for almost a week, Here's how it went.</p>
+<br>
+<img src="aurl.png" alt="image" width="700" style="margin-top: 1.0rem;">
+</body>
+</html>

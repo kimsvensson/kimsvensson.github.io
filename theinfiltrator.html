@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+function startTime() {
+  var today = new Date();
+  var h = today.getHours();
+  var m = today.getMinutes();
+  var s = today.getSeconds();
+  m = checkTime(m);
+  s = checkTime(s);
+  document.getElementById('txt').innerHTML =
+  h + ":" + m + ":" + s;
+  var t = setTimeout(startTime, 1000);
+}
+function checkTime(i) {
+  if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+  return i;
+}
+</script>
+<body onload="startTime()">
+
+<div id="txt" style="float:right;font-family:Menlo,serif;font-size:11px ;"></div>
+</body>
+<h1 style="float:right;margin-right: -54px;margin-top: 11px;">Take your time</h1>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {background-color:lightgrey;background-repeat:no-repeat;background-position:top left;background-attachment:fixed;}
+h1{font-family:Menlo, serif;font-size:11px;font-style:normal;font-weight:normal;color:#000000;background-color:#none;}
+p {font-family:Menlo, serif;font-size:14px;font-style:normal;font-weight:normal;color:#000000;background-color:#none;width: 600px;}
+blue{font-family:Menlo, serif;font-size:14px;font-style:normal;font-weight:normal;color:#0400ff;background-color:#none;}
+red{font-family:Menlo, serif;font-size:14px;font-style:normal;font-weight:normal;color:#ff0000;background-color:#none;}
+yellow{font-family:Menlo, serif;font-size:14px;font-style:normal;font-weight:normal;color:#00ff11;background-color:#none;}
+orange{font-family:Menlo, serif;font-size:14px;font-style:normal;font-weight:normal;color:darkorange;background-color:#none;}
+
+</style>
+</head>
+<body>
+<p>The Infiltrator</p>
+<br>
+<P>Five vinyl text prints.</P>
+<p>2018</p>
+<br>
+<p>Work made in relation to the residency The Collective Subject of History, organized by Praksis and held at Guttormsgaards Arkiv in Blaker (Norway), an eclectic collection consisting of thousands of objects gathered from around the world, located in the collectors home. The residency aimed to explore the potentials of the archive as a site for re-making collective histories, how to make relevant the personal narratives, and how the challenging of current historiography may add to future processes of history making.</p>
+<p>"Kim Svensson's approach to the archive is on methods of display in order to grasp which gestures are applied to both disrupt and connect linearities we become aware of when looking as an outsider. What happens when intimacy is allowed into the process of engaging with the archive? Can we dissolve pre-existing linearities and create new structures and connections?"</p>
+<p>As a correspondence to the archive, <i>The Infiltrator</i> consists of five footnotes based upon definitions and terms relating to "Theatre", written to resonate an intimate and performative approach towards gestures, disruptions and display taking place in the archive. 
+The footnotes cross-reference specific objects, each other and correspond with specific locations in the archive; creating a 'choreographed' awareness among the encounters and eventually punctuating the universe of the archive.</p>
+<br>
+<p><a /a>
+<img src="infiltrator1.jpeg" alt="installation" width="600"style="margin-top: 1.0rem;">
+<img src="infiltrator2.jpeg" alt="installation" width="600"style="margin-top: 1.0rem;">
+<img src="infiltrator3.jpeg" alt="installation" width="600"style="margin-top: 1.0rem;">
+<img src="infiltrator4.jpeg" alt="installation" width="600"style="margin-top: 1.0rem;">
+</body>
+</html>

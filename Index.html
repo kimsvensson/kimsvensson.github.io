@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+function startTime() {
+  var today = new Date();
+  var h = today.getHours();
+  var m = today.getMinutes();
+  var s = today.getSeconds();
+  m = checkTime(m);
+  s = checkTime(s);
+  document.getElementById('txt').innerHTML =
+  h + ":" + m + ":" + s;
+  var t = setTimeout(startTime, 1000);
+}
+function checkTime(i) {
+  if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+  return i;
+}
+</script>
+<body onload="startTime()">
+
+<div id="txt" style="float:right;font-family:Menlo,serif;font-size:11px ;"></div>
+</body>
+<h1 style="float:right;margin-right: -54px;margin-top: 11px;">Take your time</h1>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {background-color:lightgrey;background-repeat:no-repeat;background-position:top left;background-attachment:fixed;}
+h1{font-family:Menlo, serif;font-size:11px;font-style:normal;font-weight:normal;color:#000000;background-color:#none;}
+p {font-family:Menlo, serif;font-size:14px;font-style:normal;font-weight:normal;color:#000000;background-color:#none;width: 600px;}
+blue{font-family:Menlo, serif;font-size:14px;font-style:normal;font-weight:normal;color:#0400ff;background-color:#none;}
+red{font-family:Menlo, serif;font-size:14px;font-style:normal;font-weight:normal;color:#ff0000;background-color:#none;}
+yellow{font-family:Menlo, serif;font-size:14px;font-style:normal;font-weight:normal;color:#00ff11;background-color:#none;}
+orange{font-family:Menlo, serif;font-size:14px;font-style:normal;font-weight:normal;color:darkorange;background-color:#none;}
+
+</style>
+</head>
+<body>
+<p>Index (Starring John The Radio Presenter)</p>
+<br>
+<p>Digital video</p>
+<P>6 min. Loop</P>
+<p>2020</p>
+<br>
+<p><i>Index (Starring John the Radio Presenter)</i> is a video consisting of various images and clips of ‘camouflaged’ networks and infrastructural systems; stealth cell towers in the form of trees, electric transformer houses disguised as private homes, antennas painted to match fasades, CCTV cameras covered in bark and a stone housing water pipes. Alongside the images is a voice over read by a radio presenter describing a room he’s positioned in. A seemingly constant loop of ruptures between inside/outside, private and public.</p>
+<br>
+<img src="index1.png" alt="installation" width="600">
+<p><a href="https://vimeo.com/448275310" target="_blank" style="color: green"><i>Watch here</i></a>
+
+</body>
+</html>

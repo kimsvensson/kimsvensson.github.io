@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+function startTime() {
+  var today = new Date();
+  var h = today.getHours();
+  var m = today.getMinutes();
+  var s = today.getSeconds();
+  m = checkTime(m);
+  s = checkTime(s);
+  document.getElementById('txt').innerHTML =
+  h + ":" + m + ":" + s;
+  var t = setTimeout(startTime, 1000);
+}
+function checkTime(i) {
+  if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+  return i;
+}
+</script>
+<body onload="startTime()">
+
+<div id="txt" style="float:right;font-family:Menlo,serif;font-size:11px ;"></div>
+</body>
+<h1 style="float:right;margin-right: -54px;margin-top: 11px;">Take your time</h1>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {background-color:lightgrey;background-repeat:no-repeat;background-position:top left;background-attachment:fixed;}
+h1{font-family:Menlo, serif;font-size:11px;font-style:normal;font-weight:normal;color:#000000;background-color:#none;}
+p {font-family:Menlo, serif;font-size:14px;font-style:normal;font-weight:normal;color:#000000;background-color:#none;width: 600px;}
+blue{font-family:Menlo, serif;font-size:14px;font-style:normal;font-weight:normal;color:#0400ff;background-color:#none;}
+red{font-family:Menlo, serif;font-size:14px;font-style:normal;font-weight:normal;color:#ff0000;background-color:#none;}
+yellow{font-family:Menlo, serif;font-size:14px;font-style:normal;font-weight:normal;color:#00ff11;background-color:#none;}
+orange{font-family:Menlo, serif;font-size:14px;font-style:normal;font-weight:normal;color:darkorange;background-color:#none;}
+
+</style>
+</head>
+<body>
+<p>Faithful Phantom</p>
+<br>
+<P>Reading (~15 minutes)</P>
+<p>2019</p>
+<br>
+<p>A reading of a text, sitting on a foldable picnic table, that shares an attempt of making sense of a travel I made alone in 2017, to a city not mentioned. This poeticized story reflects upon the relationships between subjectivity and impressions, between the real and the imagined, told through distorted memories and observations. The reading are conjoined with an edited sound assembled from various films, for example "The Pink Panther Strikes Again" (1976).</p>
+<p>Thanks Josefine Bernholtz for reading with me!</p>
+<br>
+<img src="gratinkim1.jpeg" alt="installation" width="600">
+<p>Performing at Kunstnernes Hus, Oslo. Photo: Destiny's Atelier.</p>
+
+</body>
+</html>
