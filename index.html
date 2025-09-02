@@ -5,50 +5,57 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Kim Svensson</title>
   <style>
-    :root {
-      --page-padding: 24px;
-      --max-width: 560px;
-      --text-size: 24px;
-      --line-height: 1.4;
+    :root{
+      --pad: clamp(16px, 5vw, 24px);
+
+      --measure: 24ch;
+
+      --size: clamp(18px, 5.6vw, 20px);
+      --lh: 1.55;
     }
 
-    /* Base */
     html, body { height: 100%; }
-    body {
+    body{
       margin: 0;
       font-family: Helvetica, Arial, "Helvetica Neue", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
-      font-size: var(--text-size);
-      line-height: var(--line-height);
+      font-size: var(--size);
+      line-height: var(--lh);
       color: #111;
       background: #fff;
+      -webkit-text-size-adjust: 100%;
+      text-wrap: balance;
     }
 
-    /* Layout */
-    .wrap {
-      padding: var(--page-padding);
-      max-width: var(--max-width);
+    .wrap{
+      padding: var(--pad);
+      max-width: var(--measure);
     }
 
-    /* Type */
-    h1 {
+    h1{
       margin: 0 0 1rem 0;
-      font: inherit;          /* keep it understated like the comp */
+      font: inherit;
       font-weight: normal;
     }
 
-    .stack { margin-top: 1.2rem; }
+    .stack{ margin-top: 1.2rem; }
+    .stack > * + *{ margin-top: .15rem; }
 
-    /* Lists without bullets to match the reference */
-    ul {
+    ul{
       list-style: none;
       padding: 0;
       margin: .25rem 0 0 0;
     }
-    li { margin: 0; }
+    li{ margin: 0; }
 
-    /* Links stay quiet */
-    a { color: inherit; text-decoration: none; }
-    a:hover { text-decoration: underline; }
+    a{ color: inherit; text-decoration: none; }
+    a:hover{ text-decoration: underline; }
+
+    @media (min-width: 900px){
+      :root{
+        --size: 16px;
+        --lh: 1.6;
+      }
+    }
   </style>
 </head>
 <body>
@@ -63,7 +70,7 @@
 
     <section class="stack" aria-label="Contact">
       <div><a href="mailto:kimsvensson.studio@outlook.com">kimsvensson.studio@outlook.com</a></div>
-      <div><a href="tel:+4793643429">0047 93643429</a></div>
+      <div>0047 93643429</div>
     </section>
 
     <section class="stack" aria-label="Education">
@@ -86,4 +93,5 @@
   </main>
 </body>
 </html>
+
 
