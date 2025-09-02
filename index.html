@@ -10,10 +10,13 @@
 
       --measure: 24ch;
 
-      --size: clamp(18px, 5.6vw, 20px);
+      --size: clamp(18px, 5.8vw, 22px);
+
       --lh: 1.4;
     }
 
+
+    *{ box-sizing: border-box; }
     html, body { height: 100%; }
     body{
       margin: 0;
@@ -23,22 +26,22 @@
       color: #111;
       background: #fff;
       -webkit-text-size-adjust: 100%;
-      text-wrap: balance;
+      text-rendering: optimizeLegibility;
     }
 
     .wrap{
+      inline-size: min(100%, calc(var(--measure) + var(--pad) * 2));
       padding: var(--pad);
-      max-width: var(--measure);
     }
 
     h1{
       margin: 0 0 1rem 0;
       font: inherit;
-      font-weight: normal;
+      font-weight: 400;
     }
 
     .stack{ margin-top: 1.2rem; }
-    .stack > * + *{ margin-top: .15rem; }
+    .stack > * + *{ margin-top: .2rem; }
 
     ul{
       list-style: none;
@@ -51,10 +54,7 @@
     a:hover{ text-decoration: underline; }
 
     @media (min-width: 900px){
-      :root{
-        --size: 16px;
-        --lh: 1.6;
-      }
+      :root{ --size: 16px; }
     }
   </style>
 </head>
@@ -70,7 +70,7 @@
 
     <section class="stack" aria-label="Contact">
       <div><a href="mailto:kimsvensson.studio@outlook.com">kimsvensson.studio@outlook.com</a></div>
-      <div>0047 93643429</div>
+      <div>0047 93643429</a></div>
     </section>
 
     <section class="stack" aria-label="Education">
@@ -93,5 +93,6 @@
   </main>
 </body>
 </html>
+
 
 
