@@ -6,11 +6,17 @@
   <meta name="format-detection" content="telephone=no" />
   <title>Kim Svensson</title>
   <style>
-    :root{
-      --gutter: 18px;     
-      --size: clamp(18px, 4.8vw, 24px); 
-      --lh: 1.4;                      
-    }
+  :root{
+    --gutter: 18px;
+    --size: clamp(18px, 4.8vw, 24px);
+    --lh: 1.4;
+}
+
+@media (max-width: 480px){
+  :root{
+    --gutter: 14px;
+  }
+}
 
     *{ box-sizing: border-box; }
     html, body{ height: 100%; }
