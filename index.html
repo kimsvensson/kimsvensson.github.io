@@ -6,93 +6,67 @@
   <title>Kim Svensson</title>
   <style>
     :root{
-      --pad: clamp(16px, 5vw, 24px);
 
-      --measure: 24ch;
-
-      --size: clamp(18px, 5.8vw, 22px);
-
+      --gutter: 24px;
+      --size: clamp(18px, 4.8vw, 24px);
       --lh: 1.4;
     }
 
-
     *{ box-sizing: border-box; }
-    html, body { height: 100%; }
+    html, body{ height: 100%; }
     body{
       margin: 0;
       font-family: Helvetica, Arial, "Helvetica Neue", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
       font-size: var(--size);
       line-height: var(--lh);
-      color: #111;
+      color: #000;
       background: #fff;
       -webkit-text-size-adjust: 100%;
-      text-rendering: optimizeLegibility;
     }
 
-    .wrap{
-      inline-size: min(100%, calc(var(--measure) + var(--pad) * 2));
-      padding: var(--pad);
-    }
+    main{ margin: var(--gutter); }
 
-    h1{
-      margin: 0 0 1rem 0;
-      font: inherit;
-      font-weight: 400;
-    }
 
-    .stack{ margin-top: 1.2rem; }
-    .stack > * + *{ margin-top: .2rem; }
-
-    ul{
-      list-style: none;
-      padding: 0;
-      margin: .25rem 0 0 0;
-    }
-    li{ margin: 0; }
+    .group + .group{ margin-top: 1.4em; }
 
     a{ color: inherit; text-decoration: none; }
     a:hover{ text-decoration: underline; }
-
-    @media (min-width: 900px){
-      :root{ --size: 16px; }
-    }
   </style>
 </head>
 <body>
-  <main class="wrap">
-    <h1>Kim Svensson</h1>
+  <main>
+    <div class="group">Kim Svensson</div>
 
-    <section class="stack" aria-label="Roles">
-      <div>Designer</div>
-      <div>Creative Director</div>
-      <div>Artist</div>
-    </section>
+    <div class="group">
+      Designer<br>
+      Creative Director<br>
+      Artist
+    </div>
 
-    <section class="stack" aria-label="Contact">
-      <div><a href="mailto:kimsvensson.studio@outlook.com">kimsvensson.studio@outlook.com</a></div>
-      <div>0047 93643429</a></div>
-    </section>
+    <div class="group">
+      <a href="mailto:kimsvensson.studio@outlook.com">kimsvensson.studio@outlook.com</a><br>
+      <a href="tel:+4793643429">0047 93643429</a>
+    </div>
 
-    <section class="stack" aria-label="Education">
-      <div>2027: MA Industrial design, Oslo School of Architecture and design</div>
-      <div>2019: BFA, Oslo National Academy of the Arts</div>
-    </section>
+    <div class="group">
+      2027: MA Industrial design, Oslo School of Architecture and design<br>
+      2019: BFA, Oslo National Academy of the Arts
+    </div>
 
-    <section class="stack" aria-label="Exhibitions">
-      <div>Exhibitions:</div>
-      <ul>
-        <li>Dutch Design Week</li>
-        <li>Kunstnernes Hus</li>
-        <li>Destiny’s Atelier</li>
-        <li>Delfi Malmö</li>
-        <li>Løvens Hule</li>
-        <li>Casa das Artes Porto</li>
-        <li>Offprint London</li>
-      </ul>
-    </section>
+    <div class="group">
+      Exhibitions:<br>
+      Dutch Design Week<br>
+      Kunstnernes Hus<br>
+      Destiny’s Atelier<br>
+      Delfi Malmö<br>
+      Løvens Hule<br>
+      Casa das Artes Porto<br>
+      Offprint London
+    </div>
   </main>
 </body>
 </html>
+
 
 
 
