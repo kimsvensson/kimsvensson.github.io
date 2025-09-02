@@ -1,114 +1,89 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<script>
-function startTime() {
-  var today = new Date();
-  var h = today.getHours();
-  var m = today.getMinutes();
-  var s = today.getSeconds();
-  m = checkTime(m);
-  s = checkTime(s);
-  document.getElementById('txt').innerHTML =
-  h + ":" + m + ":" + s;
-  var t = setTimeout(startTime, 1000);
-}
-function checkTime(i) {
-  if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
-  return i;
-}
-</script>
-<body onload="startTime()">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Kim Svensson</title>
+  <style>
+    :root {
+      --page-padding: 24px;
+      --max-width: 560px;
+      --text-size: 14px;
+      --line-height: 1.6;
+    }
 
-<div id="txt" style="float:right;font-family:Menlo,serif;font-size:11px ;"></div>
-</body>
-<h1 style="float:right;margin-right: -70px;margin-top: 11px;">Take your time</h1>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Kim Svensson</title>
-<meta name="og:title" content="Kim Svensson">
-<meta name="description" content="Kim Svensson">
-<style>
-div {
-  margin-left: 1.1rem;
-}
-body {background-color:lightgrey;background-repeat:no-repeat;background-position:top left;background-attachment:fixed;}
-h1{font-family:Menlo, serif;font-size:11px;font-style:normal;font-weight:normal;color:#000000;background-color:#none;}
-p {font-family:Menlo, serif;font-size:15px;font-style:normal;font-weight:normal;color:#000000;background-color:#none;}
-blue{font-family:Menlo, serif;font-size:14px;font-style:normal;font-weight:normal;color:#0400ff;background-color:#none;}
-red{font-family:Menlo, serif;font-size:14px;font-style:normal;font-weight:normal;color:#ff0000;background-color:#none;}
-yellow{font-family:Menlo, serif;font-size:14px;font-style:normal;font-weight:normal;color:#00ff11;background-color:#none;}
-orange{font-family:Menlo, serif;font-size:14px;font-style:normal;font-weight:normal;color:darkorange;background-color:#none;}
-a:link {
-  color: black;
-  background-color: transparent;
-  text-decoration: none;
-  font-style: none; }
-  a:visited {
-  color: black;
-  background-color: transparent;
-  text-decoration: none;
-  font-style: none; }
-</style>
+    /* Base */
+    html, body { height: 100%; }
+    body {
+      margin: 0;
+      font-family: Helvetica, Arial, "Helvetica Neue", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      font-size: var(--text-size);
+      line-height: var(--line-height);
+      color: #111;
+      background: #fff;
+    }
+
+    /* Layout */
+    .wrap {
+      padding: var(--page-padding);
+      max-width: var(--max-width);
+    }
+
+    /* Type */
+    h1 {
+      margin: 0 0 1rem 0;
+      font: inherit;          /* keep it understated like the comp */
+      font-weight: normal;
+    }
+
+    .stack { margin-top: 1.2rem; }
+
+    /* Lists without bullets to match the reference */
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: .25rem 0 0 0;
+    }
+    li { margin: 0; }
+
+    /* Links stay quiet */
+    a { color: inherit; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+  </style>
 </head>
 <body>
-<p>Hello &#128075;</p><br>
-<p>My name is Kim Svensson, b. 1995 in Sweden.</p>
-<p>Section <a href="#0.1" style="color:blue;">0.1</a> for works, mostly video. Section <a href="#0.3"><blue> 0.3</blue></a> for projects, mostly web-related. About in <a href="#0.4" style="color:blue;">0.4</a>.</p>
-<br>
-<p><a href="https://vimeo.com/user45686230" target="_blank" style="color: green"><i>Here's</i></a> my Vimeo</p>
-<br>
-<p>Section <blue>0.1</blue>: <red>Works</red></p>
-<p>Section <blue>0.2</blue>: <red>Publications</red></p>
-<p>Section <blue>0.3</blue>: <red>Projects</red></p>
-<p>Section <blue>0.4</blue>: <red>About + contact</red></p>
+  <main class="wrap">
+    <h1>Kim Svensson</h1>
 
-<br>
-<a name="0.1"></a>
-<p><blue>0.1</blue></p>
-<p><red>Works</red></p>
-  
-<p><orange>&#9679;</orange><a href="kimsvensson.github.io/imweek.html"> I'm Week (2021)</a></p>
+    <section class="stack" aria-label="Roles">
+      <div>Designer</div>
+      <div>Creative Director</div>
+      <div>Artist</div>
+    </section>
 
-<p><orange>&#9679;</orange><a href="kimsvensson.github.io/Indexstarring.html"> Index (Starring John the Radio Presenter) (2020)</a></p>
+    <section class="stack" aria-label="Contact">
+      <div><a href="mailto:kimsvensson.studio@outlook.com">kimsvensson.studio@outlook.com</a></div>
+      <div><a href="tel:+4793643429">0047 93643429</a></div>
+    </section>
 
-<p><orange>&#9679;</orange><a href="kimsvensson.github.io/Transmit.html"> Transmit (2019)</a></p>
+    <section class="stack" aria-label="Education">
+      <div>2027: MA Industrial design, Oslo School of Architecture and design</div>
+      <div>2019: BFA, Oslo National Academy of the Arts</div>
+    </section>
 
-<p><orange>&#9679;</orange><a href="kimsvensson.github.io/faithfulphantom.html"> Faithful Phantom (2019)</a></p>
-
-<p><orange>&#9679;</orange> <a href="kimsvensson.github.io/theinfiltrator.html"> The Infiltrator (2018)</a></p>
-
-<p><orange>&#9679;</orange> <a href="kimsvensson.github.io/Wishingwell.html"> Wishing Well (2017)</a></p>
-
-<p><orange>&#9679;</orange> <a href="kimsvensson.github.io/untitled.html"> Untitled (2017)</a></p>
-
-<br>
-<p><blue>0.2</blue></p>
-<p><red>Publications</red></p>
-
-<p><orange>&#9679;</orange> Ekipaget (2019)</p>
-
-<p><orange>&#9679;</orange> Tensions / Sp&auml;nningar (2017)</p>
-
-<br>
-<a name="0.3"></a>
-<p><blue>0.3</blue></p>
-<p><red>Projects</red></p>
-
-<p><orange>&#9679;</orange> Website for artist Martin White - Big Science.</p>
-<p><orange>&#9679;</orange> Designed and built the website for publisher Torpedo. <a href="https://torpedobok.no" target="_blank" style="color: green;"><i>Link!</i></a></p>
-<div><p>Ongoing project involving design and development of an online archive & database.</p></div>  
-<div><p>The site was featured on Cargo Collective's "Sites in Use".</p></div>
-<p><orange>&#9679;</orange> Designed the the website for Torpedo on occasion of Printed Matter's Virtual Art Book Fair, 2021.</p>
-<br>
-
-<a name="0.4"></a>
-<p><blue>0.4</blue></p>
-<p><red>About</red></p>
-
-<p>Currently pursuing a masters degree in design at The Oslo School of Architecture and Design (AHO).</p>
-<p>Email: kimsvensson.studio [at] outlook.com</p>
-<br>
-
+    <section class="stack" aria-label="Exhibitions">
+      <div>Exhibitions:</div>
+      <ul>
+        <li>Dutch Design Week</li>
+        <li>Kunstnernes Hus</li>
+        <li>Destiny’s Atelier</li>
+        <li>Delfi Malmö</li>
+        <li>Løvens Hule</li>
+        <li>Casa das Artes Porto</li>
+        <li>Offprint London</li>
+      </ul>
+    </section>
+  </main>
 </body>
 </html>
 
